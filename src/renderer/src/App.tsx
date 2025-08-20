@@ -1,10 +1,9 @@
-import WeatherApp from './WeatherApp';
+import Index from './Pages/Index/Index';
 
 function App(): React.JSX.Element {
   return (
     <>
-      <div className="text-red-600 btn">sdsa</div>
-      <WeatherApp />
+      <Index />
     </>
   );
 }

@@ -10,6 +10,7 @@ function createWindow(): void {
     height: 670,
     show: false,
     autoHideMenuBar: true,
+    backgroundColor: 'white',
     ...(process.platform === 'linux' ? { icon } : {}),
     webPreferences: {
       preload: join(__dirname, '../preload/index.js'),
@@ -21,10 +22,7 @@ function createWindow(): void {
     mainWindow.show();
   });
 
-  const wc = mainWindow.webContents;
-  console.log(wc.session.flushStorageData());
-
-  mainWindow.webContents.openDevTools();
+  //  mainWindow.webContents.openDevTools();
 
   mainWindow.webContents.setWindowOpenHandler((details) => {
     shell.openExternal(details.url);
